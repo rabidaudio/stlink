@@ -85,6 +85,8 @@ We recommend to install `stlink-tools` from the package repository of the used d
 
 Please use v1.7.0 instead, **but note that this version is no longer maintained and supported!**
 
+If you need support for the V3-MINIE on MacOS, there's a [community-maintained fork that backports support to v1.7.0](https://github.com/rabidaudio/stlink#fork-support-for-v3-minie-on-mac-devices).
+
 ## Installation from source (advanced users)
 
 When there is no executable available for your platform or you need the latest (possible unstable) version you need to compile the toolset yourself. This procedure is explained in the [compiling manual](doc/compiling.md).
