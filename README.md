@@ -1,3 +1,32 @@
+# **FORK: SUPPORT FOR V3-MINIE on Mac devices**
+
+Due to difficulties with Apple's security policies, the stlink project [dropped support for Mac after version 0.7.0](https://github.com/stlink-org/stlink/issues/1331). Support for the STLINK-V3MINIE was [added after](https://github.com/stlink-org/stlink/issues/820), in 1.8.0. This fork backports support for V3 devices to version 0.7.0. You'll need to compile it from source and deviate from [the official build instructions](https://github.com/stlink-org/stlink/blob/testing/doc/compiling.md).
+
+I made this fork for myself and will be unlikely to continue to support it in the future. It's very likely to break again with the next major release of MacOS. Use at your own risk.
+
+```bash
+git clone git@github.com:rabidaudio/stlink.git
+cd stlink
+brew install cmake libusb
+# uninstall the homebrew version, if you have it:
+brew uninstall stlink
+make
+make install
+```
+
+```
+st-info --probe
+Found 1 stlink programmers
+  version:    V3J8
+  serial:     003E00383232511639353236
+  flash:      0 (pagesize: 0)
+  sram:       0
+  chipid:     0x0000
+  descr:      unknown device
+```
+
+--
+
 # Open source version of the STMicroelectronics STlink Tools
 
 [![BSD licensed](https://img.shields.io/badge/license-BSD-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
